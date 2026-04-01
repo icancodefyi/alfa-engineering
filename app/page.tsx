@@ -38,11 +38,13 @@ export default function Page() {
   const bodyClass = "text-base leading-relaxed md:text-lg"
   const captionClass = "text-[13px] leading-tight md:text-sm"
   const cardClass = "rounded-xl border border-[#c8cfcc] bg-[#f8f9f8] p-6 shadow-[0_4px_20px_rgba(0,0,0,0.05)]"
+  const containerClass = "mx-auto w-full max-w-300 px-4 sm:px-6"
 
   return (
     <main className="bg-[#f5f7f6] text-[#0f1a18]">
       <div className="w-full">
-        <section className="animate-in fade-in slide-in-from-bottom-5 mx-auto w-full max-w-7xl px-4 py-12 duration-700 md:px-7 md:py-16 lg:px-10 lg:py-20">
+        <section className="animate-in fade-in slide-in-from-bottom-5 duration-700 py-16 md:py-24">
+          <div className={containerClass}>
           <header className="flex items-center justify-between border-b border-[#d9dedc] pb-5 text-[13px] text-[#37564f] md:text-sm">
             <div className="hidden gap-6 md:flex">
               <span>Home</span>
@@ -58,7 +60,7 @@ export default function Page() {
             </div>
           </header>
 
-          <div className="mt-10 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
+          <div className="mt-10 grid items-start gap-10 lg:grid-cols-[1fr_1fr]">
             <div className="flex flex-col justify-between">
               <div>
                 <div className="mb-8 flex items-start justify-between text-[#30524b]">
@@ -72,51 +74,53 @@ export default function Page() {
                   <p className={`${captionClass} hidden md:block`}>Industrial Reliability</p>
                 </div>
 
-                <h1 className="max-w-[12ch] text-[64px] leading-[0.97] font-medium tracking-[-0.025em] md:text-[72px]">
+                <h1 className="max-w-[11ch] text-[46px] leading-[0.96] font-medium tracking-[-0.03em] sm:text-[54px] md:text-[72px]">
                   Powering the Future
                   <br />
                   with <span className="text-[#7b8481]">Clean Engineering</span>
                 </h1>
 
-                <p className={`mt-6 max-w-[34ch] text-[#495a56] ${bodyClass}`}>
+                <p className={`mt-5 max-w-[34ch] text-sm leading-relaxed text-[#495a56] sm:text-base md:text-lg`}>
                   Precision-built industrial components engineered for durability, energy efficiency, and reliable process uptime.
                 </p>
               </div>
 
-              <div className="mt-10">
-                <div className="flex items-center gap-3">
-                  <button className="rounded-full bg-[#045147] px-6 py-3 text-lg font-semibold text-[#f0f8f6] transition-transform hover:-translate-y-0.5">
-                    Get Industrial Solutions
-                  </button>
-                  <button className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#045147] text-[#f0f8f6] transition-transform hover:-translate-y-0.5">
-                    <IconArrowRight size={22} stroke={1.8} />
-                  </button>
-                </div>
-
-                <div className="mt-5 flex items-center gap-4 rounded-full border border-[#d2d8d5] px-3 py-2 shadow-[0_4px_14px_rgba(0,0,0,0.04)] w-fit">
-                  <div className="flex -space-x-3">
-                    <img
-                      src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&q=80"
-                      alt="customer"
-                      className="h-10 w-10 rounded-full border-2 border-[#f7f8f8] object-cover"
-                    />
-                    <img
-                      src="https://images.unsplash.com/photo-1542206395-9feb3edaa68d?auto=format&fit=crop&w=100&q=80"
-                      alt="customer"
-                      className="h-10 w-10 rounded-full border-2 border-[#f7f8f8] object-cover"
-                    />
-                    <img
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
-                      alt="customer"
-                      className="h-10 w-10 rounded-full border-2 border-[#f7f8f8] object-cover"
-                    />
+              <div className="mt-8">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                  <div className="flex items-center gap-3">
+                    <button className="rounded-full bg-[#045147] px-5 py-3 text-sm font-semibold text-[#f0f8f6] transition-transform hover:-translate-y-0.5 sm:px-6 sm:text-lg">
+                      Get Industrial Solutions
+                    </button>
+                    <button className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#045147] text-[#f0f8f6] transition-transform hover:-translate-y-0.5 sm:h-12 sm:w-12">
+                      <IconArrowRight size={22} stroke={1.8} />
+                    </button>
                   </div>
-                  <p className="text-sm text-[#36544e]">4K+ Customers</p>
+
+                  <div className="flex w-fit items-center gap-3 rounded-full border border-[#d2d8d5] px-3 py-2">
+                    <div className="flex -space-x-3">
+                      <img
+                        src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&q=80"
+                        alt="customer"
+                        className="h-10 w-10 rounded-full border-2 border-[#f7f8f8] object-cover"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1542206395-9feb3edaa68d?auto=format&fit=crop&w=100&q=80"
+                        alt="customer"
+                        className="h-10 w-10 rounded-full border-2 border-[#f7f8f8] object-cover"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
+                        alt="customer"
+                        className="h-10 w-10 rounded-full border-2 border-[#f7f8f8] object-cover"
+                      />
+                    </div>
+                    <p className="text-sm text-[#36544e]">4K+ Customers</p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <article className="relative overflow-hidden rounded-lg border border-[#7aa1bf] bg-[#78a7cf] shadow-[0_16px_32px_rgba(0,0,0,0.12)] min-h-120 md:min-h-140">
+            <article className="relative mt-2 overflow-hidden rounded-lg border border-[#7aa1bf] bg-[#78a7cf] min-h-96 sm:min-h-125 lg:mt-0 lg:min-h-140">
               <img
                 src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1500&q=80"
                 alt="Industrial field"
@@ -124,37 +128,39 @@ export default function Page() {
               />
               <div className="absolute inset-0 bg-[#2e516f]/28" />
 
-              <div className="absolute right-6 bottom-6 rounded-lg border border-white/40 bg-[#0f2b3f]/35 px-5 py-4 text-white backdrop-blur-[1px] md:right-8 md:bottom-8">
-                <p className="text-5xl leading-none font-semibold md:text-6xl">500+</p>
+              <div className="absolute right-4 bottom-4 rounded-lg border border-white/30 bg-[#0f2b3f]/25 px-4 py-3 text-white sm:right-8 sm:bottom-8 sm:px-5 sm:py-4">
+                <p className="text-4xl leading-none font-semibold sm:text-5xl md:text-6xl">500+</p>
                 <p className="mt-1 text-sm text-[#d9e8f4] md:text-base">Installations Delivered</p>
               </div>
             </article>
           </div>
+          </div>
         </section>
 
-        <section className="animate-in fade-in slide-in-from-bottom-5 mx-auto mt-4 w-full max-w-7xl border-t border-[#d7ddda] px-4 py-16 duration-700 md:px-7 md:py-24 lg:px-10">
-          <div className="grid items-start gap-10 lg:grid-cols-12">
-            <div className="lg:col-span-5">
+        <section className="animate-in fade-in slide-in-from-bottom-5 border-t border-[#d7ddda] py-16 md:py-24 duration-700">
+          <div className={containerClass}>
+          <div className="grid items-start gap-10 lg:grid-cols-[2fr_3fr]">
+            <div>
               <h2 className={`${h2Class} max-w-[12ch] text-[#121817]`}>
                 Driving the Future
                 <br />
-                with <span className="text-[#7b8481]">Sustainable</span>
+                with Sustainable
                 <br />
                 Industrial Systems
               </h2>
-              <div className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#045147] p-1 text-[#f1f8f6]">
-                <button className="rounded-full px-6 py-2 text-base font-semibold md:text-lg">About Us</button>
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#0d6659]">
+              <div className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#045147] p-1 text-[#f1f8f6]">
+                <button className="rounded-full px-5 py-2 text-sm font-semibold md:px-6 md:text-lg">About Us</button>
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#0d6659] md:h-10 md:w-10">
                   <IconArrowRight size={19} />
                 </span>
               </div>
             </div>
 
-            <div className="lg:col-span-7">
-              <p className="max-w-[32ch] text-[24px] leading-tight text-[#1d3430] md:text-[30px]">
+            <div>
+              <p className="max-w-[30ch] text-[20px] leading-tight text-[#1d3430] sm:text-[24px] md:text-[30px]">
                 ALFA is committed to efficient, reliable, and environmentally responsible engineering.
               </p>
-              <div className="mt-8 grid gap-4 md:grid-cols-2">
+              <div className="mt-5 grid gap-4 md:mt-6 md:grid-cols-2 md:gap-6">
                 <article className={cardClass}>
                   <h3 className={`${h3Class} text-[#164c43]`}>Our Mission</h3>
                   <ul className="mt-4 space-y-3 text-base leading-tight text-[#576661] md:text-lg">
@@ -186,34 +192,35 @@ export default function Page() {
               </div>
             </div>
           </div>
+          </div>
         </section>
 
-        <section className="animate-in fade-in slide-in-from-bottom-5 mt-0 bg-[#024d45] py-16 text-[#ecf6f3] duration-700 md:py-24">
-          <div className="mx-auto grid w-full max-w-7xl items-start gap-10 px-4 md:px-7 lg:grid-cols-[1fr_1.15fr] lg:px-10">
+        <section className="animate-in fade-in slide-in-from-bottom-5 bg-[#024d45] py-16 text-[#ecf6f3] duration-700 md:py-24">
+          <div className={`${containerClass} grid items-start gap-12 lg:grid-cols-[1fr_1fr]`}>
             <div>
               <h2 className={`${h2Class} max-w-[12ch]`}>
                 <span className="text-[#d8ff2d]">Benefits</span> of Industrial Engineering
               </h2>
 
               <div className="mt-8">
-                <article className="overflow-hidden rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.18)]">
+                <article className="overflow-hidden rounded-lg">
                   <img
                     src="https://images.unsplash.com/photo-1473091534298-04dcbce3278c?auto=format&fit=crop&w=1300&q=80"
                     alt="field operations"
-                    className="h-90 w-full object-cover object-center"
+                    className="h-80 w-full object-cover object-center sm:h-96 md:h-120"
                   />
                 </article>
               </div>
             </div>
 
             <div>
-              <p className="max-w-[28ch] text-[24px] leading-tight text-[#d7ece7] md:text-[30px]">
+              <p className="max-w-[28ch] text-[20px] leading-tight text-[#d7ece7] sm:text-[24px] md:text-[30px]">
                 Better energy efficiency and stronger operational resilience for modern plants.
               </p>
 
-              <div className="mt-8 space-y-5">
-                <article className="rounded-xl bg-[#f6f8f8] px-6 py-6 text-[#102120] shadow-[0_6px_18px_rgba(0,0,0,0.12)]">
-                  <div className="flex flex-wrap items-center justify-between gap-4">
+              <div className="mt-6 space-y-4 md:mt-8 md:space-y-6">
+                <article className="flex min-h-44 items-center rounded-xl bg-[#f6f8f8] px-5 py-5 text-[#102120] md:min-h-52 md:px-6 md:py-6">
+                  <div className="flex w-full flex-wrap items-center justify-between gap-4">
                     <div>
                       <h3 className={`${h3Class} leading-none`}>Reduce Utility Costs</h3>
                       <p className={`mt-2 ${bodyClass} text-[#5d6b67]`}>
@@ -226,8 +233,8 @@ export default function Page() {
                   </div>
                 </article>
 
-                <article className="rounded-xl border border-[#7aa59d] bg-[#015046] px-6 py-6 shadow-[0_6px_18px_rgba(0,0,0,0.1)]">
-                  <div className="flex flex-wrap items-center justify-between gap-4">
+                <article className="flex min-h-44 items-center rounded-xl border border-[#7aa59d] bg-[#015046] px-5 py-5 md:min-h-52 md:px-6 md:py-6">
+                  <div className="flex w-full flex-wrap items-center justify-between gap-4">
                     <div>
                       <h3 className={`${h3Class} leading-none text-[#d8ff2d]`}>
                         Production Independence
@@ -247,21 +254,21 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="animate-in fade-in slide-in-from-bottom-5 mx-auto mt-4 w-full max-w-7xl border-t border-[#d7ddda] px-4 py-16 duration-700 md:px-7 md:py-24 lg:px-10">
-          <div className="grid items-start gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+        <section className="animate-in fade-in slide-in-from-bottom-5 border-t border-[#d7ddda] py-16 md:py-24 duration-700">
+          <div className={containerClass}>
+          <div className="grid items-start gap-12 lg:grid-cols-[1fr_1fr]">
             <div>
               <h2 className={`${h2Class} max-w-[14ch]`}>
                 Leading Industrial Solutions for a <span className="text-[#7b8481]">Sustainable Future</span>
               </h2>
 
-              <article className="relative mt-7 overflow-hidden rounded-lg shadow-[0_10px_28px_rgba(0,0,0,0.12)]">
+              <article className="relative mt-8 overflow-hidden rounded-lg">
                 <img
                   src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80"
                   alt="Large turbine"
-                  className="h-90 w-full object-cover"
+                  className="h-80 w-full object-cover sm:h-96 md:h-95"
                 />
                 <div className="absolute inset-0 bg-black/20" />
-                <div className="absolute top-4 left-4 rounded-full bg-white px-4 py-2 text-base">Exclusive</div>
                 <div className="absolute right-5 bottom-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f0f6f4] text-[#103c35]">
                   <IconArrowRight size={20} />
                 </div>
@@ -273,18 +280,18 @@ export default function Page() {
             </div>
 
             <div>
-              <p className="max-w-[18ch] text-[32px] leading-[1.05] text-[#1b4b42] md:text-[40px]">
+              <p className="max-w-[18ch] text-[24px] leading-[1.05] text-[#1b4b42] sm:text-[32px] md:text-[40px]">
                 Safe and efficient installation for optimal performance.
               </p>
 
-              <article className="mt-7 rounded-xl bg-[#024d45] p-6 text-[#eaf4f2] shadow-[0_10px_24px_rgba(0,0,0,0.16)]">
-                <div className="space-y-5">
+              <article className="mt-8 rounded-xl bg-[#024d45] p-6 text-[#eaf4f2] md:p-8">
+                <div className="space-y-4 md:space-y-6">
                   <div>
-                    <p className="text-8xl leading-none font-semibold text-[#d8ff2d]">65%</p>
-                    <p className="mt-2 text-base text-[#cce1dc]">Energy conversion efficiency</p>
+                    <p className="text-7xl leading-none font-semibold text-[#d8ff2d] sm:text-8xl md:text-9xl">65%</p>
+                    <p className="mt-2 text-base text-[#cce1dc] md:text-lg">Energy conversion efficiency</p>
                   </div>
 
-                  <ul className="space-y-2 text-base text-[#d3e8e3]">
+                  <ul className="space-y-2 text-base text-[#d3e8e3] md:text-lg">
                     <li>Installation & Mounting</li>
                     <li>Maintenance & Care</li>
                     <li>Remote Monitoring</li>
@@ -293,21 +300,22 @@ export default function Page() {
               </article>
             </div>
           </div>
+          </div>
         </section>
 
-        <section className="animate-in fade-in slide-in-from-bottom-5 mt-0 bg-[#e7ecea] py-14 duration-700 md:py-20">
-          <div className="mx-auto w-full max-w-7xl px-4 md:px-7 lg:px-10">
+        <section className="animate-in fade-in slide-in-from-bottom-5 bg-[#e7ecea] py-16 md:py-24 duration-700">
+          <div className={containerClass}>
           <h2 className={`${h2Class} max-w-[16ch]`}>
             Successful <span className="text-[#6d7572]">Implementation</span> Across Critical Sectors
           </h2>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-[0.95fr_1.15fr]">
-            <article className="rounded-xl bg-[#024d45] p-8 text-[#e6f0ee] shadow-[0_10px_24px_rgba(0,0,0,0.16)]">
+          <div className="mt-8 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+            <article className="rounded-xl bg-[#024d45] p-6 text-[#e6f0ee] shadow-[0_10px_24px_rgba(0,0,0,0.16)] md:p-8">
               <div className="flex items-start justify-between">
-                <p className="text-8xl leading-none font-semibold text-[#d8ff2d] md:text-9xl">35%</p>
+                <p className="text-7xl leading-none font-semibold text-[#d8ff2d] md:text-9xl">35%</p>
                 <p className="max-w-[10ch] text-right text-sm text-[#bdd8d2] md:text-base">Monthly electricity savings</p>
               </div>
-              <p className="mt-8 max-w-[26ch] text-[24px] leading-tight md:text-[28px]">
+              <p className="mt-6 max-w-[26ch] text-[20px] leading-tight md:text-[24px] lg:text-[28px]">
                 Lower operational expenses with better system performance and fewer failures.
               </p>
               <button className="mt-8 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#d8ff2d] text-[#13342e]">
@@ -315,7 +323,7 @@ export default function Page() {
               </button>
             </article>
 
-            <article className="rounded-xl border border-[#c4cdca] bg-[#f3f6f5] p-6 text-[#153732] shadow-[0_10px_24px_rgba(0,0,0,0.08)] md:p-8">
+            <article className="rounded-xl border border-[#c4cdca] bg-[#f3f6f5] p-5 text-[#153732] shadow-[0_10px_24px_rgba(0,0,0,0.08)] md:p-8">
               <div className="border-b border-[#c8d0cd] pb-5">
                 <p className="flex items-center gap-2 text-[24px] leading-none md:text-[30px]">
                   <IconMapPin size={26} />
@@ -344,7 +352,8 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="animate-in fade-in slide-in-from-bottom-5 mx-auto mt-4 w-full max-w-7xl border-t border-[#d7ddda] px-4 py-14 duration-700 md:px-7 md:py-20 lg:px-10">
+        <section className="animate-in fade-in slide-in-from-bottom-5 border-t border-[#d7ddda] py-16 md:py-24 duration-700">
+          <div className={containerClass}>
           <div className="flex flex-wrap items-start justify-between gap-6">
             <h2 className={`${h2Class} max-w-[18ch]`}>
               Discover the Latest Insights in the World of <span className="text-[#7b8481]">Industrial Energy</span>
@@ -352,21 +361,21 @@ export default function Page() {
             <button className="rounded-full border border-[#5a857d] bg-transparent px-6 py-3 text-base font-semibold text-[#1d4b43] md:text-lg">Learn More</button>
           </div>
 
-          <div className="mt-8 space-y-4">
+          <div className="mt-6 space-y-3 md:mt-8">
             {blogPosts.map((post) => (
               <article
                 key={post.title}
-                className="grid gap-4 rounded-md border border-[#dde3e0] bg-[#f1f4f3] p-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(0,0,0,0.06)] md:grid-cols-[160px_1fr_auto] md:items-center"
+                className="grid gap-4 rounded-md border border-[#dde3e0] bg-[#f1f4f3] p-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(0,0,0,0.06)] md:grid-cols-[140px_1fr_auto] md:items-center md:p-4"
               >
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="h-28 w-full rounded-lg object-cover md:w-40"
+                  className="h-20 w-full rounded-lg object-cover md:h-28 md:w-36"
                 />
                 <div>
                   <p className={`${captionClass} text-[#7f8986]`}>{post.date}</p>
-                  <h3 className="mt-1 max-w-[26ch] text-[24px] leading-[1.05] font-semibold text-[#0f302a] md:text-[28px]">{post.title}</h3>
-                  <p className={`mt-2 max-w-[56ch] ${bodyClass} text-[#4e5f5a]`}>{post.excerpt}</p>
+                  <h3 className="mt-1 max-w-[26ch] text-[22px] leading-[1.04] font-bold text-[#0f302a] md:text-[28px]">{post.title}</h3>
+                  <p className={`mt-1 max-w-[56ch] ${bodyClass} text-[#4e5f5a]`}>{post.excerpt}</p>
                 </div>
                 <span className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#86a49e] text-[#17453d]">
                   <IconArrowRight size={19} />
@@ -374,38 +383,39 @@ export default function Page() {
               </article>
             ))}
           </div>
+          </div>
         </section>
 
-        <footer className="animate-in fade-in slide-in-from-bottom-5 mt-0 bg-[#024d45] py-10 text-[#edf6f3] duration-700 md:py-12">
-          <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 md:px-7 lg:grid-cols-[1fr_1fr] lg:px-10">
+        <footer className="animate-in fade-in slide-in-from-bottom-5 bg-[#024d45] py-7 text-[#edf6f3] duration-700 md:py-10">
+          <div className={`${containerClass} grid gap-8 lg:grid-cols-[1fr_1fr]`}>
             <div>
-              <p className="text-[44px] leading-none font-semibold tracking-tight text-[#d8ff2d] md:text-[56px]">ALFA.Engineers</p>
-              <p className={`mt-5 max-w-[30ch] ${bodyClass} text-[#c2dad5]`}>
+              <p className="text-[34px] leading-none font-semibold tracking-tight text-[#d8ff2d] md:text-[48px]">ALFA.Engineers</p>
+              <p className={`mt-4 max-w-[30ch] text-[#d2e4df] ${bodyClass}`}>
                 Subscribe to get product updates, engineering insights, and practical maintenance guides.
               </p>
             </div>
 
             <div>
-              <h3 className="text-[24px] leading-tight font-semibold md:text-[30px]">Sign up to our newsletter</h3>
-              <div className="mt-5 flex w-full max-w-130 flex-wrap gap-2">
+              <h3 className="text-[20px] leading-tight font-semibold md:text-[26px]">Sign up to our newsletter</h3>
+              <div className="mt-4 flex w-full max-w-130 flex-col gap-2 sm:flex-row">
                 <input
                   placeholder="Enter your email"
                   className="h-12 flex-1 rounded-full border border-[#97bab3] bg-[#eaf3f1] px-5 text-[#1f3632] placeholder:text-[#7f938e]"
                 />
-                <button className="h-12 rounded-full border border-[#97bab3] px-5 font-semibold">Subscribe</button>
+                <button className="h-12 rounded-full border border-[#97bab3] px-5 font-semibold sm:w-auto">Subscribe</button>
               </div>
             </div>
           </div>
 
-          <div className="mt-8 border-t border-b border-[#6e938c] py-5 text-base text-[#d7e8e4] md:text-lg">
-            <div className="flex flex-wrap justify-between gap-4">
-              <div className="flex flex-wrap gap-6">
+          <div className="mt-6 border-t border-b border-[#6e938c] py-4 text-sm text-[#d5e5e1] md:text-base">
+            <div className={`${containerClass} flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-between`}>
+              <div className="flex flex-wrap gap-4 sm:gap-6">
                 <span>Portfolio</span>
                 <span>Career</span>
                 <span>Features</span>
               </div>
               <span>alfaengineers786@gmail.com</span>
-              <div className="flex flex-wrap gap-6">
+              <div className="flex flex-wrap gap-4 sm:gap-6">
                 <span>Maintenance</span>
                 <span>Support</span>
                 <span>Contact</span>
@@ -413,7 +423,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="mt-6 flex flex-wrap items-center justify-between gap-3 text-sm text-[#cbe0db] md:text-base">
+          <div className={`${containerClass} mt-5 flex flex-col gap-3 text-sm text-[#d4e4e0] sm:flex-row sm:items-center sm:justify-between`}>
             <p>@2026 ALFA ENGINEERS. All rights reserved.</p>
             <div className="flex gap-6">
               <span>Terms & Conditions</span>
